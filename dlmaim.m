@@ -16,6 +16,7 @@ function q = dlmaim(R3, O3, A3, S)
 %   literature (e.g., Li et al., IEEE). It operates directly on the
 %   wavedec2 coefficient vector using explicit subband indexing.
 
+
 % -------------------------
 % Part 1: Detail restoration term
 % -------------------------
@@ -107,3 +108,4 @@ theta2 = theta - 2;
 s = s + theta2 * S(lambda2+1,1) * S(lambda2+1,2);
 e = s + S(lambda2+1,1) * S(lambda2+1,2) - 1;
 end
+
