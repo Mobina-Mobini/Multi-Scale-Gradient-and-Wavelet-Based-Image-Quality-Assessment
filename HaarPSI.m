@@ -4,7 +4,6 @@ function score = HaarPSI(A, B)
 %
 % This is a compact, self-contained implementation adapted from Reisenhofer et al.
 % See: R. Reisenhofer et al., "A Haar wavelet-based perceptual similarity index..."
-% (Please attribute in README / file header). :contentReference[oaicite:3]{index=3}
 
 % Convert to double grayscale in [0,255] range
 if ndims(A) == 3
@@ -23,7 +22,7 @@ if any(size(A) ~= size(B))
     error('HaarPSI: images must be same size');
 end
 
-% Parameters (kept similar to paper defaults)
+% Parameters
 alpha = 0.5; beta = 6.0; % contrast / logistic-like constants (paper uses tuned values)
 eps = 1e-8;
 
@@ -84,3 +83,4 @@ function W = local_weight_map(LL)
 E = sqrt(conv2(LL.^2, ones(3)/9, 'same'));
 W = E / (max(E(:)) + eps);
 end
+
