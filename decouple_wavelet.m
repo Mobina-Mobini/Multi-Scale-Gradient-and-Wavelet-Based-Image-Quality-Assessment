@@ -1,6 +1,6 @@
 function [R, A] = decouple_wavelet(O, T, S)
 % DECOUPLE_WAVELET
-% Wavelet-domain decoupling of detail losses and additive impairments.
+% Wavelet-domain decoupling of detail losses and additive impairments (DPD).
 %
 % Inputs:
 %   O - reference wavelet coefficient vector (from wavedec2)
@@ -110,3 +110,4 @@ function A = calAngle(H, V)
 % CALANGLE Compute orientation angle from horizontal and vertical components
 A = atan(V ./ (H + 1e-30)) + pi * (H < 0);
 end
+
