@@ -4,7 +4,7 @@ function results = TID2013YIQ(dataPath)
 %
 % Input:
 %   dataPath - root folder where dataset is stored.
-%              Expected structure (default if missing):
+%              Expected structure:
 %                dataPath/reference_images/I01.BMP ... I25.BMP
 %                dataPath/distorted_images/Ixx_yy_z.BMP  (your prior folder convention)
 %   If dataPath is not provided, current folder is used and the user will be asked
@@ -19,7 +19,7 @@ function results = TID2013YIQ(dataPath)
 % Notes:
 %   - This script does not bundle TID2013 dataset. Provide the dataset locally
 %     and set dataPath accordingly.
-%   - This script accepts the CCS detection logic that was in original code:
+%   - This script accepts the CCS detection logic:
 %     for moderate luminance change (0.9 < LumDiff < 1.4) it converts to Qcom
 %     chroma-like component before feeding to main().
 
@@ -119,3 +119,4 @@ end
 save('Tid2013_results.mat', 'results', '-v7.3');
 
 end
+
