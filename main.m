@@ -49,7 +49,7 @@ end
 [Rcoeff, Acoeff] = decouple_wavelet(coeffR, coeffT, bookR);
 
 % IMPORTANT:
-% DLMAIM expects magnitudes (as in your original code)
+% DLMAIM expects magnitudes
 dlmaimScore = dlmaim(abs(Rcoeff), abs(coeffR), abs(Acoeff), bookR);
 
 % -------------------------
@@ -81,3 +81,4 @@ if isinteger(img)
 end
 out = 0.299 * img(:,:,1) + 0.587 * img(:,:,2) + 0.114 * img(:,:,3);
 end
+
